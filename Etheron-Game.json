@@ -1,0 +1,303 @@
+{
+  "name": "Etheron",
+  "menuBackgroundImage": "https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/Backgrounds/yldan-vs-neeska.jpg",
+  "defaultRessources": {
+    "backgrounds": [
+      "https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/PLAYMATE/PM_yldan-vs-neeska-c.png",
+      "https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/PLAYMATE/PM_neeska-vs-elio-c.png",
+"https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/PLAYMATE/PM_Igrathar-vs-heckar-c.png",
+"https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/PLAYMATE/PM_yldan-vs-neeska-bw.png",
+"https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/PLAYMATE/PM_neeska-vs-elio-bw.png", ,
+"https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/PLAYMATE/PM_Igrathar-vs-heckar-bw.png",
+    ],
+    "decksUrl": "https://raw.githubusercontent.com/SlootQ/Etheron-TCG-Arena/refs/heads/main/Etheron-Decks.json"
+  },
+  "customHelp": "(1) Au début de la partie, chaque joueur place 1 Champion face cachée sur chaque zone Champion (3 au total) et 3 cartes Éther de base face visible dans la zone Éther.\n(2) Chaque joueur pioche manuellement 4 cartes pour sa main de départ, puis peut effectuer 1 mulligan en remettant n'importe quelles cartes de sa main dans le deck, mélangez, puis repiochez le même nombre.\n(3) Toutes les cartes (sauf Champions) peuvent être jouées dans la zone Éther. Les Éthers de base sont face visible, les autres cartes jouées en Éther sont face cachée.\n(4) Les Sorts se jouent depuis la main vers la zone Stack (Pile), puis vont au Cimetière une fois résolus.\n(5) Utilisez les zones Invocations et Champions pour organiser clairement vos unités.",
+  "cardRotation": "90",
+  "cards": {
+    "dataUrl": "https://raw.githubusercontent.com/SlootQ/Etheron-TCG-Arena/refs/heads/main/Etheron-CardList.json",
+    "cardBack": "https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/etheron-assets/ETH-BACK-MAIN-1.webp",
+    "cardBackColor": "#161E42",
+    "extraCardBacks": {
+	"VoidDeck" : "https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/etheron-assets/ETH-BACK-VOID-1.webp"
+    }
+  },
+  "deckBuilding": {
+    "mainFilters": [
+      "type",
+      "cost",
+      "name",
+      "Domain",
+      "Set"
+    ],
+    "formats": [
+      {
+        "title": "Classic",
+        "gameplay": "Classic",
+        "customCategories": []
+      }
+    ]
+  },
+  "gameplay": {
+    "Classic": {
+      "mulligan": {
+        "info": "Piochez manuellement 4 cartes. Vous pouvez effectuer 1 mulligan en remettant n'importe quelles cartes de votre main dans le deck, mélangez, puis repiochez le même nombre.",
+        "startingHandSize": 0,
+        "drawNewHand": false,
+        "putSelectionAtBottom": false,
+        "drawNewSelectedCards": false
+      },
+      "newTurn": {
+        "drawOnStart": false,
+        "sharedTurn": false,
+        "firstPlayerTokenName": "",
+        "drawPerTurn": "1"
+      },
+      "defaultNotes": "PV Champions : utilisez un compteur ou des notes pour suivre les points de vie de chaque colonne de Champion (0 à 10).",
+      "tokens": [],
+      "countersStartingValues": [
+        0
+      ],
+      "hideFacedDownCards": false,
+      "draggableTokens": [],
+      "sections": {
+        "customSections": [
+          "VoidDeck",
+          "Invocations",
+          "ChampionsCol1",
+          "ChampionsCol2",
+          "ChampionsCol3",
+          "Ether",
+          "Reve",
+          "Stack"
+        ],
+        "layout": {
+          "direction": "column",
+          "isSymetricalForOpponents": true,
+          "content": [
+            {
+              "direction": "row",
+              "style": false,
+              "content": [
+                {
+                  "section": "Invocations",
+                  "style": {
+                    "width": "45%",
+                    "borderRadius": "1vh"
+                  }
+                },
+                {
+                  "direction": "column",
+                  "style": {
+                    "width": "30%",
+                    "margin": "0 1vh"
+                  },
+                  "content": [
+                    {
+                      "section": "ChampionsCol1",
+                      "style": {
+                        "height": "7vh",
+                        "borderRadius": "1vh",
+                        "marginBottom": "0.5vh"
+                      }
+                    },
+                    {
+                      "section": "ChampionsCol2",
+                      "style": {
+                        "height": "7vh",
+                        "borderRadius": "1vh",
+                        "marginBottom": "0.5vh"
+                      }
+                    },
+                    {
+                      "section": "ChampionsCol3",
+                      "style": {
+                        "height": "7vh",
+                        "borderRadius": "1vh"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "section": "Reve",
+                  "style": {
+                    "width": "15%",
+                    "borderRadius": "1vh"
+                  }
+                }
+              ],
+              "isSymetricalForOpponents": true
+            },
+            {
+              "direction": "row",
+              "style": false,
+              "content": [
+                {
+                  "section": "VoidDeck",
+                  "style": {
+                    "width": "15%"
+                  }
+                },
+                {
+                  "section": "Ether",
+                  "style": {
+                    "width": "35%",
+                    "borderRadius": "1vh"
+                  }
+                },
+                {
+                  "section": "Stack",
+                  "style": {
+                    "width": "50%",
+                    "borderRadius": "1vh"
+                  }
+                }
+              ],
+              "isSymetricalForOpponents": true
+            ]
+          ]
+        },
+        "categoriesAlreadyOnBoard": [],
+        "autoPlayFromHand": {
+          "Sort": "Stack"
+        },
+        "autoPlayFromStack": {
+          "Sort": "Discard"
+        },
+        "sectionsDict": {
+          "VoidDeck": {
+            "title": "VoidDeck",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "DECK",
+            "drawPerTurn": 0,
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": false,
+            "displayedTitle": "Void Deck",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false,
+            "cardBackColor": "#1E123D"
+          },
+          "Invocations": {
+            "title": "Invocations",
+            "isHidden": "no",
+            "height": "HUGE",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Invocations",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "ChampionsCol1": {
+            "title": "ChampionsCol1",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Champion 1",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "ChampionsCol2": {
+            "title": "ChampionsCol2",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Champion 2",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "ChampionsCol3": {
+            "title": "ChampionsCol3",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Champion 3",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Ether": {
+            "title": "Ether",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Éther",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Reve": {
+            "title": "Reve",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Rêve",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Stack": {
+            "isDefaultSection": true,
+            "title": "Stack",
+            "isHidden": "no",
+            "height": "HUGE",
+            "alignment": "NONE",
+            "isHorizontalAllowed": false,
+            "isGroupForbidden": true,
+            "displayedTitle": "Pile",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          }
+        }
+      }
+    }
+  }
+}
